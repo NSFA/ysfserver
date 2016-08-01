@@ -1,0 +1,6 @@
+{
+  "SUCCESS": {"code": 200, "msg": "操作成功"},
+  "BAD_REQUEST": {"code": 400, "msg": "请求无效，参数异常"},
+  "UNAUTHORIZED": {"code": 401, "msg": "会话无效"},
+  "SERVER_ERROR": {"code": 500, "msg": "服务器内部错误"}
+}

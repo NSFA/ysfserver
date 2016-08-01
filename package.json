@@ -1,0 +1,33 @@
+{
+  "name": "ysfserver",
+  "version": "0.0.1",
+  "description": "koa server for SailFish",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NSFA/ysfserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NSFA/ysfserver/issues"
+  },
+  "homepage": "https://github.com/NSFA/ysfserver#readme",
+  "keywords": [
+    "koa",
+    "server",
+    "NSFA"
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa": "^1.2.0",
+    "koa-body": "^1.4.0",
+    "koa-ejs": "^3.0.0",
+    "koa-generic-session": "^1.10.2",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0"
+  },
+  "author": "波比(｡･∀･)ﾉﾞ",
+  "license": "MIT"
+}
