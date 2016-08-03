@@ -1,17 +1,19 @@
+'use strict';
 /**
  * server Koa 服务器配置
  *
  * @author:   波比(｡･∀･)ﾉﾞ
  * @date:     2016-08-01  下午9:55
  */
-import EventEmitter  from 'events';
-import fs from 'fs';
-import path from 'path';
+const EventEmitter = require('events');
+const fs = require('fs');
+const path = require('path');
 
-import koa from 'koa';
-import router from 'router';
-import bodyParser from 'koa-body';
-import ejsRender from 'koa-ejs';
+const koa = require('koa');
+const router = require('router');
+const bodyParser = require('koa-body');
+const ejsRender = require('koa-ejs');
+
 
 class Server extends EventEmitter{
 	constructor(config){
@@ -21,7 +23,7 @@ class Server extends EventEmitter{
 		this.init();
 	}
 	init (){
-
+	
 	}
 	reset(){
 
@@ -32,4 +34,4 @@ class Server extends EventEmitter{
 }
 
 
-export default Server
+module.exports = Server;
