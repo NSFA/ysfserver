@@ -1,0 +1,7 @@
+{
+	"route": {
+		"GET /api/xxx/get": {"id": 15278, "type": "api", "path": "/get/api/xxx/get"}
+	},
+	"port": 8001,
+	"engine": "ejs"
+}
