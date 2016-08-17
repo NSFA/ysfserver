@@ -1,27 +1,30 @@
 # ysfserver
 七鱼数据服务代理平台
 
-## 本地模拟
-
-
-## 数据代理
-
-## 使用实例
-**route.js** 文件
+## 命令行启动
+> ysfserver config.json
 
 ```javascript
+  ysfserver -h
+```
+
+## config.json文件
+
+```json
     {
-        /* 路由 */
-        routes : {
-
+    	"apiRoute": {
+    		"get" : [
+              "api/list"
+            ],
+            "post" : [
+              "api/form"
+            ]
+    	},
+        "viewRoute" : {
+          "/" : "index.ejs"
         },
-        /* 端口 */
-        port : 8001,
-
-        /* 模板后缀 */
-        viewExt: '.ftl',
-        /* 模板引擎 */
-        engine: 'freemarker'
-
+    	"port": 8001,
+        "viewRoot"  : "./views",
+    	"engine": "ejs"
     }
 ```
