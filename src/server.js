@@ -23,7 +23,16 @@ class Server extends EventEmitter{
 		this.init();
 	}
 	init (){
-	
+
+	}
+	viewEgine(){
+		ejsRender(this.app, {
+			root: path.join(this.config.webRoot, this.config.viewRoot || './views'),
+			layout: false,
+			viewExt: 'ejs',
+			cache: true,
+			debug: false
+		})
 	}
 	reset(){
 
