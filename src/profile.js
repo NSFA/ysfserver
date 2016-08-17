@@ -5,7 +5,6 @@
  * @author:   波比(｡･∀･)ﾉﾞ
  * @date:     2016-08-03  下午2:22
  */
-
 const EventEmitter = require('events');
 const fs = require('fs');
 const _ = require('./util/util');
