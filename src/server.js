@@ -13,17 +13,23 @@ const koa = require('koa');
 const router = require('router');
 const bodyParser = require('koa-body');
 const ejsRender = require('koa-ejs');
+const profile = require('./profile');
 
 
 class Server extends EventEmitter{
 	constructor(config){
 		super();
-		this.config = config;
-		this.app = koa();
+		this.config();
 		this.init();
 	}
-	init (){
 
+	config(){
+		this.config  = config;
+		this.app = koa();
+	}
+	init(){
+		// 解析数据参数
+		profile(this.config);
 	}
 	viewEgine(){
 		ejsRender(this.app, {
@@ -33,9 +39,6 @@ class Server extends EventEmitter{
 			cache: true,
 			debug: false
 		})
-	}
-	reset(){
-
 	}
 	listen(){
 

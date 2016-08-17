@@ -12,9 +12,9 @@ const lg = require('./util/logger');
 const codeMap = require('./util/codeMap');
 
 class Profile extends EventEmitter {
-	constructor (){
+	constructor (config){
 		super();
-
+		this.init(config);
 	}
 
 	init(){
