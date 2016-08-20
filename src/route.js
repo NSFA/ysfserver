@@ -14,7 +14,7 @@ class ParseRouter extends Base {
 	constructor(route){
 		super(route);
 		this.router = Router();
-		this.parseRouter(route)
+		this.parseRouter(route);
 	}
 	parseRouter(route, that){
 		let apiRoute = route.apiRoute,
@@ -47,7 +47,7 @@ class ParseRouter extends Base {
 	 */
 	viewRoute(template){
 		return function *viewRoute(next){
-			this.render(template);
+			yield this.render(template);
 		}
 	}
 

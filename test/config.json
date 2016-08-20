@@ -8,7 +8,7 @@
         ]
 	},
     "viewRoute" : {
-      "/" : "app.ejs"
+      "/" : "app"
     },
 	"port": 8001,
     "viewRoot"  : "./views",

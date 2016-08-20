@@ -11,20 +11,20 @@
 ## config.json文件
 
 ```json
-    {
-    	"apiRoute": {
-    		"get" : [
-              "api/list"
-            ],
-            "post" : [
-              "api/form"
-            ]
-    	},
-        "viewRoute" : {
-          "/" : "index.ejs"
-        },
-    	"port": 8001,
-        "viewRoot"  : "./views",
-    	"engine": "ejs"
-    }
+   {
+   	"apiRoute": {
+   		"get" : [
+             "api/list"
+           ],
+           "post" : [
+             "api/form"
+           ]
+   	},
+       "viewRoute" : {
+         "/" : "app"
+       },
+   	"port": 8001,
+       "viewRoot"  : "./views",
+   	"engine": "ejs"
+   }
 ```
