@@ -5,8 +5,12 @@
 > ysfserver config.json
 
 ```javascript
-  ysfserver -h
+  Usage:  ysfserver [options...]
 
+  Options:
+    -i,--init     初始化ysfserver目录
+    -c,--config   配置文件
+    -h,--help     help list
 ```
 
 ## config.json文件
