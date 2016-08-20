@@ -1,10 +1,13 @@
 {
   "name": "ysfserver",
   "version": "0.0.1",
-  "description": "koa server for SailFish",
+  "description": "koa server proxy for SailFish",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin":{
+    "ysfserver":"./bin/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "co": "^4.6.0",
+    "commander": "^2.9.0",
     "koa": "^1.2.0",
     "koa-body": "^1.4.0",
     "koa-ejs": "^3.0.0",
