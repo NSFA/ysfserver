@@ -5,45 +5,49 @@
  * @author:   波比(｡･∀･)ﾉﾞ
  * @date:     2016-08-01  下午9:55
  */
-const EventEmitter = require('events');
+const Base = require('./base');
 const fs = require('fs');
 const path = require('path');
 
 const koa = require('koa');
-const router = require('router');
 const bodyParser = require('koa-body');
 const ejsRender = require('koa-ejs');
-const profile = require('./profile');
 
 
-class Server extends EventEmitter{
-	constructor(config){
-		super();
-		this.config();
-		this.init();
+class Server extends Base{
+	constructor(routes){
+		super(routes);
 	}
-
-	config(){
-		this.config  = config;
+	config(routes){
 		this.app = koa();
 	}
-	init(){
-		// 解析数据参数
-		profile(this.config);
+	init(routes){
+		this.viewEgine();
+		this.app.use(routes);
+		this.app.on('error', this.error.bind(this))
 	}
 	viewEgine(){
 		ejsRender(this.app, {
-			root: path.join(this.config.webRoot, this.config.viewRoot || './views'),
+			root: path.join(process.cwd(), './views'),
 			layout: false,
 			viewExt: 'ejs',
 			cache: true,
 			debug: false
 		})
 	}
-	listen(){
-
+	listen(port){
+		this.app.listen(port);
+		console.log(`listening on port: ${port}`);
+	}
+	error(err, ctx){
+		console.log(err.stack);
 	}
 }
 
 
-module.exports = Server;
+module.exports = function(cPath){
+	let config = require(path.join(process.cwd(), cPath)),
+		routes = require('./route')(config);
+
+	new Server(routes).listen(config.port);
+};
