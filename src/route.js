@@ -60,10 +60,10 @@ class ParseRouter extends Base {
 	 * @returns {viewRoute}
 	 */
 	apiRoute(method, api){
-		api = path.join(process.cwd(), './mock', method, api+'.js');
-		return function *viewRoute(next){
+		api = path.join(process.cwd(), './mock', method, api);
+		return function *apiRoute(next){
 			this.type = 'json';
-			this.body = fs.readFileSync(path);
+			this.body = require(api + '.js')(require(api + '.json'))
 		}
 	}
 
@@ -71,7 +71,6 @@ class ParseRouter extends Base {
 		return this.router.routes()
 	}
 }
-
 
 module.exports = function(route){
 	var parse = new ParseRouter(route);

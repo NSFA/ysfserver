@@ -1,10 +1,10 @@
 {
 	"apiRoute": {
 		"get" : [
-          "api/list"
+          "/api/list"
         ],
         "post" : [
-          "api/form"
+          "/api/form"
         ]
 	},
     "viewRoute" : {
