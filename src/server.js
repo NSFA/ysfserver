@@ -1,6 +1,6 @@
 'use strict';
 /**
- * server Koa 服务器配置
+ * server Koa 服务器
  *
  * @author:   波比(｡･∀･)ﾉﾞ
  * @date:     2016-08-01  下午9:55

@@ -1,4 +1,10 @@
 'use strict';
+/**
+ * template 模板文件
+ *
+ * @author:   波比(｡･∀･)ﾉﾞ
+ * @date:     2016-08-21  上午9:29
+ */
 module.exports = function(name){
 	name = name || '测试首页模板';
 	let tpl = `<html>

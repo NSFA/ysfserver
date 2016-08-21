@@ -1,4 +1,10 @@
 'use strict';
+/**
+ * folder 文件处理类
+ *
+ * @author:   波比(｡･∀･)ﾉﾞ
+ * @date:     2016-08-20  下午11:49
+ */
 const path = require('path');
 const Base = require('./base');
 const fs = require('fs');
