@@ -16,7 +16,13 @@ class ParseRouter extends Base {
 		this.router = Router();
 		this.parseRouter(route);
 	}
-	parseRouter(route, that){
+
+	/**
+	 * 解析路由配置文件
+	 *
+	 * @param {Object} route			- 路由配置, 1: Api路由, 2: View路由
+	 */
+	parseRouter(route){
 		let apiRoute = route.apiRoute,
 			viewRoute = route.viewRoute,
 			methods = Object.keys(apiRoute),
@@ -67,6 +73,11 @@ class ParseRouter extends Base {
 		}
 	}
 
+	/**
+	 * 返回路由结果中间件
+	 *
+	 * @returns {*}
+	 */
 	routes(){
 		return this.router.routes()
 	}

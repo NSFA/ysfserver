@@ -23,6 +23,11 @@ class Folder extends Base{
 		this.createVeiwFiles(config.viewRoute, config.engine)
 	}
 
+	/**
+	 * 创建Api目录文件夹
+	 *
+	 * @param {Object} apiRoute 		- Api路由数组
+	 */
 	createApiFiles(apiRoute){
 		let keys = Object.keys(apiRoute),
 			fullApiRoute = Object.assign({}, apiRoute);
@@ -45,6 +50,12 @@ class Folder extends Base{
 
 	}
 
+	/**
+	 * 自动解析地址, 按层级结构创建文件夹
+	 *
+	 * @param {Object} routes			- 路由配置
+	 * @param {String} method			- api方法
+	 */
 	autoParseDir(routes, method){
 		let dir = path.join(cwd, './mock', method),
 			folderTree = [];
@@ -72,6 +83,7 @@ class Folder extends Base{
 
 	/**
 	 * 创建模板文件
+	 * 
 	 * @param {Object} viewRoute			- 模板路由
 	 * @param {String} suffix				- 后缀名称
 	 */
