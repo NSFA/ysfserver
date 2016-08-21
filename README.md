@@ -10,26 +10,31 @@
   Options:
     -i,--init     初始化ysfserver目录
     -c,--config   配置文件
-    -h,--help     help list
+    -h,--help     帮助列表
 ```
 
 ## config.json文件
 
 ```json
-   {
-   	"apiRoute": {
-   		"get" : [
-             "api/list"
-           ],
-           "post" : [
-             "api/form"
-           ]
-   	},
-       "viewRoute" : {
-         "/" : "app"
-       },
-   	"port": 8001,
-       "viewRoot"  : "./views",
-   	"engine": "ejs"
+    {
+        "name" : "测试服务器",
+   	    "apiRoute": {
+   		    "get" : [
+                "/ddd/",
+                "/api/list",
+                "/worksheet/get",
+                "/worksheet/get"
+            ],
+            "post" : [
+                "/api/form"
+            ]
+        },
+        "viewRoute" : {
+            "/" : "app1"
+        },
+        "port": 8002,
+        "viewRoot"  : "./views",
+        "engine": "ejs"
    }
+
 ```

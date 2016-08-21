@@ -1,16 +1,20 @@
 {
+  "name" : "测试服务器",
   "apiRoute": {
     "get" : [
-      "api/list"
+      "/ddd/",
+      "/api/list",
+      "/worksheet/get",
+      "/worksheet/get"
     ],
     "post" : [
-      "api/form"
+      "/api/form"
     ]
   },
   "viewRoute" : {
-    "/" : "app"
+    "/" : "app1"
   },
-  "port": 8001,
+  "port": 8002,
   "viewRoot"  : "./views",
   "engine": "ejs"
 }
