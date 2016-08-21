@@ -14,11 +14,13 @@ let cwd = process.cwd();
 
 class Folder extends Base{
 	constructor(config){
-		super(config)
+		super(config);
+
 	}
 	init(config){
+		this.config = config;
 		this.createApiFiles(config.apiRoute);
-		//this.createVeiwFiles(config.viewRoute, config.engine)
+		this.createVeiwFiles(config.viewRoute, config.engine)
 	}
 
 	createApiFiles(apiRoute){
@@ -68,22 +70,23 @@ class Folder extends Base{
 
 	}
 
+	/**
+	 * 创建模板文件
+	 * @param {Object} viewRoute			- 模板路由
+	 * @param {String} suffix				- 后缀名称
+	 */
 	createVeiwFiles(viewRoute, suffix){
-		let keys = Object.keys(apiRoute);
+		let keys = Object.keys(viewRoute);
+		if(!fs.existsSync(path.join(cwd, './views'))) fs.mkdirSync(path.join(cwd, './views'));
 
-
-		try{
-			fs.mkdirSync('./views');
-		}catch(err){
-			keys.forEach(function(key){
-				let view = viewRoute[key] + '.'+ suffix;
-				fs.writeFile(path.join('./views', view), mkTemplate())
-			});
-
-		}
+		keys.forEach(function(key){
+			let view = viewRoute[key] + '.'+ suffix,
+				dir = path.join(cwd, './views', view);
+			if(!fs.existsSync(dir)) fs.writeFileSync(dir, mkTemplate(this.config.name));
+		}.bind(this));
 	}
 }
 
 module.exports = function(config){
 	new Folder(Object.assign({}, config));
-}
+};

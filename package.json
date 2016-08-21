@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
-    "ysfserver":"./bin/server.js"
+  "bin": {
+    "ysfserver": "./bin/server.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "co": "^4.6.0",
     "commander": "^2.9.0",
+    "jasmine": "^2.4.1",
     "koa": "^1.2.0",
     "koa-body": "^1.4.0",
     "koa-ejs": "^3.0.0",

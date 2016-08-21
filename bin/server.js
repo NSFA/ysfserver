@@ -13,9 +13,8 @@ program
 
 
 // start config param
-
-if(program.init || !(program.init||program.config)){
-	require('../src/folder')();
+if(program.init){
+	require('../src/folder')(program.init);
 }else if(program.config){
 	require('../src/server')(program.config);
 }else{
