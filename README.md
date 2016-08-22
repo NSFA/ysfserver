@@ -1,8 +1,11 @@
 # ysfserver
 七鱼数据服务代理平台
 
-## 命令行启动
-> ysfserver config.json
+## 命令安装
+> sudo npm install ysfserver -g
+
+## 命令启动
+> ysfserver -h
 
 ```javascript
   Usage:  ysfserver [options...]
