@@ -1,6 +1,6 @@
 {
   "name": "ysfserver",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "koa server proxy for SailFish",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   ],
   "author": "波比(｡･∀･)ﾉﾞ",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "co": "^4.6.0",
     "commander": "^2.9.0",
     "jasmine": "^2.4.1",

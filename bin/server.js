@@ -14,7 +14,8 @@ program
 
 // start config param
 if(program.init){
-	require('../src/folder')(program.init);
+	var _config = require(path.join(process.cwd(), program.init));
+	require('../src/folder')(_config);
 }else if(program.config){
 	require('../src/server')(program.config);
 }else{
