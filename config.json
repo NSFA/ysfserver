@@ -2,10 +2,7 @@
   "name" : "测试服务器",
   "apiRoute": {
     "get" : [
-      "/ddd/",
-      "/api/list",
-      "/worksheet/get",
-      "/worksheet/get"
+      "/api/list"
     ],
     "post" : [
       "/api/form"
