@@ -46,7 +46,8 @@ class Logger extends EventEmitter {
 	}
 
 	/**
-	 *	
+	 * 日志文件
+	 *
 	 * @param {String} str  			日志
 	 * @param {String} type
 	 */
