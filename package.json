@@ -34,6 +34,10 @@
     "koa-generic-session": "^1.10.2",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "mocha": "^3.7.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2"
   }
 }
