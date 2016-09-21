@@ -12,7 +12,7 @@
         ]
 	},
     "viewRoute" : {
-      "/" : "app1"
+      "/" : "app"
     },
 	"port": 8002,
     "viewRoot"  : "./views",

@@ -1,10 +1,41 @@
 const assert = require('assert');
 
-describe('Array', function(){
-	describe('#indexOf()', function(){
-		it('should return -1 when the value is not present', function(){
-			assert.equal(-1, [1,2,3].indexOf(5));
-			assert.equal(-1, [1,2,3].indexOf(0));
-		})
-	})
+/**
+ * 主程序测试用例
+ *
+ * @date: 2016-09-21  下午7:36
+ * @param {String} xxx          - xxx
+ */
+describe('Server', function(){
+
 });
+
+/**
+ * 文件测试用例
+ *
+ * @date: 2016-09-21  下午7:36
+ * @param {String} xxx          - xxx
+ */
+describe('File', function(){
+		
+})
+
+/**
+ * 路由测试用例
+ *
+ * @date: 2016-09-21  下午7:34
+ * @param {String} xxx          - xxx
+ */
+describe('Route', function(){
+	
+})
+
+/**
+ * 模板测试用例
+ *
+ * @date: 2016-09-21  下午7:34
+ * @param {String} xxx          - xxx
+ */
+describe('Template', function(){
+	
+})
